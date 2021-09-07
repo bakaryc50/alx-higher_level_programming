@@ -9,3 +9,4 @@ def magic_calculation(a,b):
              10 BINARY_ADD
              11 RETURN_VALUE
     """
+    return 98 + a ** b
