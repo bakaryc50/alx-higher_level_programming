@@ -6,5 +6,5 @@ def print_last_digit(number):
     and return the value of the last digit
     """
     number = abs(number) % 10
-    print("{}".format(number))
+    print("{}".format(number), end="")
     return (int(number))
