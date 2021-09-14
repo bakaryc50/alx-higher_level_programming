@@ -8,5 +8,7 @@ def print_matrix_integer(matrix=[[]]):
     @matrix: the matrix
     """
     if matrix is not None:
-        print('\n'.join([' '.join(['{:d}'.format(x) for x in y]) for y in matrix]))
+        print('\n'.join([
+            ' '.join(['{:d}'.format(x) for x in y]) for y in matrix
+            ]))
     return None
