@@ -7,10 +7,14 @@ def safe_print_list(my_list=[], x=0):
     @my_list: the list
     """
     try:
+        
         for i in range(x):
             print(my_list[i], end="")
-            return x
+        
+        return x
+    
     except IndexError:
         return i
+    
     finally:
         print()
