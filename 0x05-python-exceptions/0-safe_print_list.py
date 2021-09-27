@@ -7,7 +7,9 @@ def safe_print_list(my_list=[], x=0):
     @my_list: the list
     """
     try:
-        for i in my_list[:x]:
-            print(i, end="")
-    except:
-        print("Can't print an index not found")
+        for i in range(x):
+            print(my_list[i], end="")
+    except IndexError:
+        return x
+    finally:
+        print()
