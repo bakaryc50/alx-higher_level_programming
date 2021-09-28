@@ -6,11 +6,13 @@ def safe_print_list_integers(my_list=[], x=0):
     Prints x elements of a list and only integers
     @my_list: the list
     """
+    count = 0
     try:
         for i in range(x):
             print("{:d}".format(my_list[i]), end="")
-        return x
-    except (ValueError, IndexError, TypeError):
+    except (ValueError, TypeError):
         pass
-    finally:
-        print()
+    else:
+        count += 1
+    print()
+    return count
