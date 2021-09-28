@@ -10,9 +10,7 @@ def safe_print_list_integers(my_list=[], x=0):
         for i in range(x):
             print("{:d}".format(my_list[i]), end="")
         return x
-    except ValueError:
-        print("not an integer value")
-    except IndexError:
-        print("IndexError: list index out of range")
+    except (ValueError, IndexError, TypeError):
+        pass
     finally:
         print()
