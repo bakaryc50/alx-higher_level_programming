@@ -9,3 +9,7 @@ class Square():
     """ A class 'Square' that defines a square by based on 0-square
     """
     __size
+    def __init__(self, size=0):
+        """ Instantiation of a Square or initialization
+        """
+        self.__size = size
