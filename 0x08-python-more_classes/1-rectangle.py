@@ -34,6 +34,10 @@ class Rectangle():
     def width(self, value):
         """A setter method
         """
+        if not isinstance(width, int):
+            raise TypeError("width must be an integer")
+        if width < 0:
+            raise ValueError("width must be >= 0")
         type(self).__width = value
 
     @property
@@ -46,4 +50,8 @@ class Rectangle():
     def height(self, value):
         """A setter method
         """
+        if not isinstance(width, int):
+            raise TypeError("width must be an integer")
+        if width < 0:
+            raise ValueError("width must be >= 0")
         type(self).__height = value
