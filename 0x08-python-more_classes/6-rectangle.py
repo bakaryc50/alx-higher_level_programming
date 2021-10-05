@@ -9,6 +9,7 @@ class Rectangle():
     """
     A class Rectangle definition based on 5-rectangle.py
     """
+
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
@@ -79,5 +80,5 @@ class Rectangle():
     def __del__(self):
         """ deletion of an Rectangle
         """
-        Rectangle.number_of_instance -= 1
+        Rectangle.number_of_instances -= 1
         print('Bye rectangle...')
