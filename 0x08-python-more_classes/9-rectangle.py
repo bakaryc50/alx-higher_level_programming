@@ -73,9 +73,9 @@ class Rectangle():
         if not isinstance(rect_2, Rectangle):
             raise TypeError('rect_2 must be an instance of Rectangle')
 
-        r1 = rect_1.width * rect_1.height
-        r2 = rect_2.width * rect_2.height
-        return (rect_1 if r1 > r2 or r1 == r2 else rect_2)
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        return rect_2
 
     def square(cls, size=0):
         """creates new instance with height and width == size
@@ -85,11 +85,11 @@ class Rectangle():
     def __str__(self):
         """ a toString method to print like print()
         """
-        if self.__width == 0 or self.__height == 0:
-            return ''
-        else:
-            hashes = "{}".format(self.print_symbol) * self.__width
-            return '\n'.join(hashes for h in range(self.__height))
+        if self.width and self.height:
+            return '\n'.join(
+                    [str(self.print_symbol) * self.width] * self.height
+                    )
+        return ''
 
     def __repr__(self):
         """ rectangle to be able to recreate a new instance
