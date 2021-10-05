@@ -67,7 +67,7 @@ class Rectangle():
         else:
             hashes = '#' * self.__width
             return '\n'.join(hashes for h in range(self.__height))
-    
+
     def __repr__(self):
-        """return a string representation of the rectangle to be able to recreate a new instance"""
+        """a string representation of the rectangle to be able to recreate a new instance"""
         return("Rectangle({}, {})".format(self.width, self.height))
