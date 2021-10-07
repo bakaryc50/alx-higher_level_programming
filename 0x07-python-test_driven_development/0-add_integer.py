@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-
-
 """ Provides a function 'add_integer' that performs integer addition """
 
 
