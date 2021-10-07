@@ -2,15 +2,13 @@
 
 
 """
-    0-add_integer module definition
+    0-add_integer module provides a function that performs integer addition
 """
 
 
 def add_integer(a, b=98):
     """
-    Function that adds 2 integers
-    add_integer(1, 98)
-    return 99
+    Add two integers
     """
     if not isinstance(a, (float, int)):
         raise TypeError('a must be an integer')
