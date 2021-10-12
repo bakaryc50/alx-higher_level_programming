@@ -3,7 +3,7 @@
 """
 
 
-def inherits_from(obj, a_class):
-    """ Check if obj is an instance of a subclass of a_class
+def is_kind_of_class(obj, a_class):
+    """ Check if obj's type is either a_class or a subclass of a_class
     """
-    return isinstance(obj, a_class) and type(obj) != a_class
+    return isinstance(obj, a_class)
