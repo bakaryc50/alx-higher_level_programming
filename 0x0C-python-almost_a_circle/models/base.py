@@ -1,13 +1,15 @@
 #!/usr/bin/python3
-""" Provide a class Base fonctionnality """
+""" Provide a Base class for all others classes """
 
 
 class Base():
+    """ Base class for all others classes """
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """ Class initialization function """
+        """ Instantiate a base class """
         if id is not None:
             self.id = id
-        __nb_objects += 1
-        self.id = __nb_objects
+        else:
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
