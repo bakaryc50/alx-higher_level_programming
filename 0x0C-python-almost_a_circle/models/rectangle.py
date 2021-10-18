@@ -7,6 +7,8 @@ from models.base import Base
 
 class Rectangle(Base):
     """ A class that represents Rectangles """
+    HEADERS = ('id', 'width', 'height', 'x', 'y')
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """ Instanciate a class Rectangle """
         super().__init__(id)
@@ -118,3 +120,9 @@ class Rectangle(Base):
                 width=self.__width,
                 height=self.__height
         )
+
+    def update(self, *args):
+        """ Update the attributes of a object """
+        if args:
+            for pair in zip(self.HEADERS, args):
+                setattr(self, *pair)
