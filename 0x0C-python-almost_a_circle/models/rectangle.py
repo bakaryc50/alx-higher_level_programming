@@ -106,3 +106,15 @@ class Rectangle(Base):
         """ Prints the Rectangle instance with the character # """
         print("\n" * self.__y, end="")
         print("\n".join([" " * self.__x + "#" * self.__width] * self.__height))
+
+    def __str__(self):
+        """ Get the string representation of a class Rectangle """
+        return "[{type}] ({id}) {x}/{y} - {width}/{height}".format(
+
+                type=self.__class__.__name__,
+                id=self.id,
+                x=self.__x,
+                y=self.__y,
+                width=self.__width,
+                height=self.__height
+        )
