@@ -1,4 +1,4 @@
--- Full creation of second_table
+-- Full creation of second_table including creation and insertion
 CREATE TABLE IF NOT EXISTS second_table (id INT, name VARCHAR(256), score INT);
 INSERT INTO second_table (id, name, score) VALUES (1, "John", 10);
 INSERT INTO second_table (id, name, score) VALUES (2, "Alex", 3);
