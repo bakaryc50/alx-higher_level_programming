@@ -16,11 +16,11 @@ def list_all_states():
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states ORDER BY id ASC;")
     result = cursor.fetchall()
-    cursor.close()
-    db.close()
     if result:
         for row in result:
             print(row)
+    cursor.close()
+    db.close()
 
     if __name__ == '__main__':
         list_all_states()
